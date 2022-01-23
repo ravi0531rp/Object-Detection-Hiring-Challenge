@@ -55,7 +55,7 @@ The description is as follows:
 * Then I downloaded the pretrained model and the config file from github.
 * In the pipeline config file, I edited the 1) number of classes 2) extractor type 3) paths
   to the tfrecord files.
-* Then, for around 13000 epochs, using the **model_main_tf2.py** script from the API 
+* Then, for around 13000 epochs with a very small ***batch size of 4***(due to limited compute), using the **model_main_tf2.py** script from the API 
   respository, I trained the SSD Model on our data.
 * After that, I exported the model as a usable pb file to make further inferences.
 
