@@ -77,7 +77,8 @@ The description is as follows:
  'Loss/total_loss': 0.2799701,
  'learning_rate': 0.018827396}**
 
-* Report obtained from evaluation on ***test*** dataset
+* Report obtained from evaluation on ***test*** dataset <br />
+    ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++<br />
    **Average Precision  (AP) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.269<br />
      Average Precision  (AP) @[ IoU=0.50      | area=   all | maxDets=100 ] = 0.531<br />
      Average Precision  (AP) @[ IoU=0.75      | area=   all | maxDets=100 ] = 0.235<br />
@@ -89,4 +90,5 @@ The description is as follows:
      Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.404<br />
      Average Recall     (AR) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.103<br />
      Average Recall     (AR) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = 0.313<br />
-     Average Recall     (AR) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.526**
+     Average Recall     (AR) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.526** <br />
+    ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
