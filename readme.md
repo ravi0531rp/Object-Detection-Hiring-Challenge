@@ -28,6 +28,10 @@ The description is as follows:
   It uses depthwise separable convolutions to reduce the number of parameters.
   More details here. [Medium Blog](https://medium.com/analytics-vidhya/image-classification-with-mobilenet-cc6fbb2cd470)
 
+## Assumptions
+* The distribution is balanced. If there are very less number of bounding boxes for any class, then it will not produce a very accurate model.
+* The bounding boxes are drawn with a consistent pattern, i.e., the padding for each box drawn is same when scaled.
+
 ## Framework
 * I chose to use [Tensorflow Object detection API](https://github.com/tensorflow/models/tree/master/research/object_detection) as it provides the training process as a callable API with a [model zoo](https://github.com/tensorflow/models/blob/master/research/object_detection/g3doc/tf2_detection_zoo.md) to choose the models from.	
 
@@ -37,7 +41,7 @@ The description is as follows:
 * There were two things as inputs 1) Annotations Json 2) Images folder
 * I had to generate the dataset in the format required by the TF Object Detection API.
 * Please refer to the [Image Splitter](https://github.com/ravi0531rp/Object-Detection-Hiring-Challenge/blob/master/Images%20Splitter.ipynb) ipynb file.
-* Using that file, I shuffled and did the train-test split of the images.
+* Using that file, I shuffled and did the train-test split of the images.(80:20)
 
 * After that, please refer to the [TF Records Generator](https://github.com/ravi0531rp/Object-Detection-Hiring-Challenge/blob/master/TF%20Records%20Generator.ipynb)
 * Using that file, with some manipulation I generated the [train.csv](https://github.com/ravi0531rp/Object-Detection-Hiring-Challenge/blob/master/data/train.csv) and [test.csv](https://github.com/ravi0531rp/Object-Detection-Hiring-Challenge/blob/master/data/test.csv) as well as visualization.
@@ -61,3 +65,28 @@ The description is as follows:
 * The folder [utils](https://github.com/ravi0531rp/Object-Detection-Hiring-Challenge/tree/master/utils) has two files [helpers.py](https://github.com/ravi0531rp/Object-Detection-Hiring-Challenge/blob/master/utils/Helpers.py) and [detector_num.py](https://github.com/ravi0531rp/Object-Detection-Hiring-Challenge/blob/master/utils/detector_num.py)
 * Those two files are the helper files which are used in the main code for generating
   detections, drawing bounding boxes and stuff.
+
+
+## Observations
+* Since the free version of colab has limited threshold for inactivity as well as limited compute time, the model trained for < ***15k epochs***. The model did draw very nice bounding boxes, but IoU as well as the clasification precision can be improved.
+* False positives can definitely be improved with further training.
+* In the last epoch trained, this is the status obtained on the ***training set***.
+**{'Loss/classification_loss': 0.100076556,
+ 'Loss/localization_loss': 0.05904458,
+ 'Loss/regularization_loss': 0.12084896,
+ 'Loss/total_loss': 0.2799701,
+ 'learning_rate': 0.018827396}**
+
+* Report obtained from evaluation on ***test*** dataset
+   **Average Precision  (AP) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.269
+     Average Precision  (AP) @[ IoU=0.50      | area=   all | maxDets=100 ] = 0.531
+     Average Precision  (AP) @[ IoU=0.75      | area=   all | maxDets=100 ] = 0.235
+     Average Precision  (AP) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.020
+     Average Precision  (AP) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = 0.160
+     Average Precision  (AP) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.385
+     Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=  1 ] = 0.163
+     Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets= 10 ] = 0.348
+     Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.404
+     Average Recall     (AR) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.103
+     Average Recall     (AR) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = 0.313
+     Average Recall     (AR) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.526**
