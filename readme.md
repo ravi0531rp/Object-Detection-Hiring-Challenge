@@ -78,3 +78,4 @@ The description is as follows:
  'learning_rate': 0.018827396}**
 
 * Report obtained from evaluation on ***test*** dataset <br />
+![Eval](https://github.com/ravi0531rp/Object-Detection-Hiring-Challenge/blob/master/outputImages/eval.png)
