@@ -78,17 +78,3 @@ The description is as follows:
  'learning_rate': 0.018827396}**
 
 * Report obtained from evaluation on ***test*** dataset <br />
-| Parameter                                | Area Type   | Value                  |
-| ---------------------------------------- | ----------- | ---------------------- |
-| Average Precision (AP) @\[ IoU=0.50:0.95 | area= all   | MaxDets=100 \] = 0.269 |
-| Average Precision (AP) @\[ IoU=0.50      | area= all   | MaxDets=100 \] = 0.531 |
-| Average Precision (AP) @\[ IoU=0.75      | area= all   | MaxDets=100 \] = 0.235 |
-| Average Precision (AP) @\[ IoU=0.50:0.95 | area= small | MaxDets=100 \] = 0.020 |
-| Average Precision (AP) @\[ IoU=0.50:0.95 | area=medium | MaxDets=100 \] = 0.160 |
-| Average Precision (AP) @\[ IoU=0.50:0.95 | area= large | MaxDets=100 \] = 0.385 |
-| Average Recall (AR) @\[ IoU=0.50:0.95    | area= all   | MaxDets= 1 \] = 0.163  |
-| Average Recall (AR) @\[ IoU=0.50:0.95    | area= all   | MaxDets= 10 \] = 0.348 |
-| Average Recall (AR) @\[ IoU=0.50:0.95    | area= all   | MaxDets=100 \] = 0.404 |
-| Average Recall (AR) @\[ IoU=0.50:0.95    | area= small | MaxDets=100 \] = 0.103 |
-| Average Recall (AR) @\[ IoU=0.50:0.95    | area=medium | MaxDets=100 \] = 0.313 |
-| Average Recall (AR) @\[ IoU=0.50:0.95    | area= large | MaxDets=100 \] = 0.526 |
