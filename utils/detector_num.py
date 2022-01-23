@@ -26,7 +26,6 @@ class Detector():
         self.confidence_threshold = None
         self.detectionBoxList = []
         self.detect_fn = None
-        self.container_type = None
         self.match_count = 0
 
     def setup(self, container_type, PATH_TO_CKPT, PATH_TO_LABELS, NUM_CLASSES, confidence_threshold, MODEL_NAME= 'wheel_graph'):

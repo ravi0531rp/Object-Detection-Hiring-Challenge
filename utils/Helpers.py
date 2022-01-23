@@ -25,16 +25,6 @@ class Helpers:
 		img = base64.b64encode(buff.getvalue()).decode("utf-8")
 		return img
 
-	def read_image_from_url(self,url):
-		open_cv_image, pilimage = None, None
-		try:
-		    response = requests.get(url)
-		    pilimage = Image.open(BytesIO(response.content)).convert('RGB')
-		    open_cv_image = np.ascontiguousarray(pilimage)
-		except:
-		    return None, None
-
-		return open_cv_image, pilimage
 
 	def validate_image(self,stream):
 		header = stream.read(512)  # 512 bytes should be enough for a header check
@@ -174,35 +164,7 @@ class Helpers:
 		return rect_point
 
 
-	def makeFolderStructure(self, rootPath):
-
-		pathList = {"upload_clean_o": rootPath+"/CleanContainers/original/",
-					"upload_clean_d": rootPath+"/CleanContainers/detections/",
-					"upload_clean_p": rootPath+"/CleanContainers/perspective/",
-					"upload_ordinary_o": rootPath+"/OrdinaryCleaning/original/",
-					"upload_ordinary_d": rootPath+"/OrdinaryCleaning/detections/",
-					"upload_ordinary_p": rootPath+"/OrdinaryCleaning/perspective/",
-					"upload_excessive_o": rootPath+"/ExcessiveCleaning/original/",
-					"upload_excessive_d": rootPath+"/ExcessiveCleaning/detections/",
-					"upload_excessive_p": rootPath+"/ExcessiveCleaning/perspective/",
-
-					"validated_excessive_o": rootPath+"/Validated/ExcessiveCleaning/original/",
-					"validated_excessive_p": rootPath+"/Validated/ExcessiveCleaning/perspective/",
-					"validated_ordinary_o": rootPath+"/Validated/OrdinaryCleaning/original/",
-					"validated_ordinary_p": rootPath+"/Validated/OrdinaryCleaning/perspective/",
-					"validated_clean_o": rootPath+"/Validated/CleanContainers/original/",
-					"validated_clean_p": rootPath+"/Validated/CleanContainers/perspective/"}
-
-		for key,val in pathList.items():
-			self.make_dir_if_not(val) 
-
-
-		val_root_path = {"validated_root_path": rootPath+"/Validated"}
-		pathList.update(val_root_path)
-
-
-		return pathList
-
+	
 	# resizes an image with an aspect ratio
 	def resize_with_aspect_ratio(self, image_low_res, width=None, height=None, inter=cv2.INTER_AREA):
 		dim = None
