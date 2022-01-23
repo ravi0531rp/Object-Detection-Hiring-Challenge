@@ -11,7 +11,7 @@ The description is as follows:
 * We have a **dataset** and we need to train an object detector to generate labels & 
   bounding boxes for 2 classes.
 * The model chosen should have ***high precision(for boxes)*** & ***accuracy(  
-  classification  of labels)***
+  classification  of labels) & speed***
 * The model chosen is **SSD Mobilenet V2 FPN**.
 
 ## Model Overview
