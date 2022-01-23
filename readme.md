@@ -81,7 +81,8 @@ The description is as follows:
 ![Eval](https://github.com/ravi0531rp/Object-Detection-Hiring-Challenge/blob/master/outputImages/eval.png)
 
 ## Output on the Test Set from the [output Images folder](https://github.com/ravi0531rp/Object-Detection-Hiring-Challenge/tree/master/outputImages)
-
+* The format on the bounding boxes is (label, confidence)
+* The threshold was set as 0.15 as the model was trained for a very small amount of time.
 ![Im1](https://github.com/ravi0531rp/Object-Detection-Hiring-Challenge/blob/master/outputImages/0.jpg)
 ![Im1](https://github.com/ravi0531rp/Object-Detection-Hiring-Challenge/blob/master/outputImages/1.jpg)
 ![Im1](https://github.com/ravi0531rp/Object-Detection-Hiring-Challenge/blob/master/outputImages/2.jpg)
