@@ -70,26 +70,25 @@ The description is as follows:
 ## Observations
 * Since the free version of colab has limited threshold for inactivity as well as limited compute time, the model trained for < ***15k epochs***. The model did draw very nice bounding boxes, but IoU as well as the clasification precision can be improved.
 * False positives can definitely be improved with further training.
-* In the last epoch trained, this is the status obtained on the ***training set***.
-**{'Loss/classification_loss': 0.100076556,
- 'Loss/localization_loss': 0.05904458,
- 'Loss/regularization_loss': 0.12084896,
- 'Loss/total_loss': 0.2799701,
+* In the last epoch trained, this is the status obtained on the ***training set***.<br />
+**{'Loss/classification_loss': 0.100076556,<br />
+ 'Loss/localization_loss': 0.05904458,<br />
+ 'Loss/regularization_loss': 0.12084896,<br />
+ 'Loss/total_loss': 0.2799701,<br />
  'learning_rate': 0.018827396}**
 
 * Report obtained from evaluation on ***test*** dataset <br />
- | Parameter      | Area        | Value       |
- | -----------    | ----------- | ----------- |
- Average Precision  (AP) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.269
- Average Precision  (AP) @[ IoU=0.50      | area=   all | maxDets=100 ] = 0.531
- Average Precision  (AP) @[ IoU=0.75      | area=   all | maxDets=100 ] = 0.235
- Average Precision  (AP) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.020
- Average Precision  (AP) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = 0.160
- Average Precision  (AP) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.385
- Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=  1 ] = 0.163
- Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets= 10 ] = 0.348
- Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.404
- Average Recall     (AR) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.103
- Average Recall     (AR) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = 0.313
- Average Recall     (AR) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.526
-  
+| Parameter                                | Area Type   | Value                  |
+| ---------------------------------------- | ----------- | ---------------------- |
+| Average Precision (AP) @\[ IoU=0.50:0.95 | area= all   | MaxDets=100 \] = 0.269 |
+| Average Precision (AP) @\[ IoU=0.50      | area= all   | MaxDets=100 \] = 0.531 |
+| Average Precision (AP) @\[ IoU=0.75      | area= all   | MaxDets=100 \] = 0.235 |
+| Average Precision (AP) @\[ IoU=0.50:0.95 | area= small | MaxDets=100 \] = 0.020 |
+| Average Precision (AP) @\[ IoU=0.50:0.95 | area=medium | MaxDets=100 \] = 0.160 |
+| Average Precision (AP) @\[ IoU=0.50:0.95 | area= large | MaxDets=100 \] = 0.385 |
+| Average Recall (AR) @\[ IoU=0.50:0.95    | area= all   | MaxDets= 1 \] = 0.163  |
+| Average Recall (AR) @\[ IoU=0.50:0.95    | area= all   | MaxDets= 10 \] = 0.348 |
+| Average Recall (AR) @\[ IoU=0.50:0.95    | area= all   | MaxDets=100 \] = 0.404 |
+| Average Recall (AR) @\[ IoU=0.50:0.95    | area= small | MaxDets=100 \] = 0.103 |
+| Average Recall (AR) @\[ IoU=0.50:0.95    | area=medium | MaxDets=100 \] = 0.313 |
+| Average Recall (AR) @\[ IoU=0.50:0.95    | area= large | MaxDets=100 \] = 0.526 |
