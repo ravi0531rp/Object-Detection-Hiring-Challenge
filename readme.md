@@ -79,3 +79,16 @@ The description is as follows:
 
 * Report obtained from evaluation on ***test*** dataset <br />
 ![Eval](https://github.com/ravi0531rp/Object-Detection-Hiring-Challenge/blob/master/outputImages/eval.png)
+
+## Output on the Test Set from the [output Images folder](https://github.com/ravi0531rp/Object-Detection-Hiring-Challenge/tree/master/outputImages)
+
+![Im1](https://github.com/ravi0531rp/Object-Detection-Hiring-Challenge/blob/master/outputImages/0.jpg)
+![Im1](https://github.com/ravi0531rp/Object-Detection-Hiring-Challenge/blob/master/outputImages/1.jpg)
+![Im1](https://github.com/ravi0531rp/Object-Detection-Hiring-Challenge/blob/master/outputImages/2.jpg)
+![Im1](https://github.com/ravi0531rp/Object-Detection-Hiring-Challenge/blob/master/outputImages/3.jpg)
+![Im1](https://github.com/ravi0531rp/Object-Detection-Hiring-Challenge/blob/master/outputImages/4.jpg)
+![Im1](https://github.com/ravi0531rp/Object-Detection-Hiring-Challenge/blob/master/outputImages/5.jpg)
+![Im1](https://github.com/ravi0531rp/Object-Detection-Hiring-Challenge/blob/master/outputImages/6.jpg)
+![Im1](https://github.com/ravi0531rp/Object-Detection-Hiring-Challenge/blob/master/outputImages/7.jpg)
+![Im1](https://github.com/ravi0531rp/Object-Detection-Hiring-Challenge/blob/master/outputImages/8.jpg)
+![Im1](https://github.com/ravi0531rp/Object-Detection-Hiring-Challenge/blob/master/outputImages/9.jpg)
